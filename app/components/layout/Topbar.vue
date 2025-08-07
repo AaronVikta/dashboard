@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { useDashboardStore } from '~/stores/useDashboardStore'
+import { useDashboardStore } from '../../../stores/dashboard'
 import { computed } from 'vue'
 
 const dashboardStore = useDashboardStore()

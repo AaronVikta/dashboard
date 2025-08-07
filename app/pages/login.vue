@@ -1,5 +1,5 @@
-<!-- pages/login.vue -->
-<template>
+pages/login.vue
+<!-- <template>
   <div class="login-container">
     <form @submit.prevent="handleLogin">
       <h2>Login</h2>
@@ -8,24 +8,24 @@
       <button type="submit">Login</button>
     </form>
   </div>
-</template>
+</template> -->
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { useAuth } from '~/composables/useAuth'
+// import { ref } from 'vue'
+// import { useRouter } from 'vue-router'
+// import { useAuth } from '~/composables/useAuth'
 
-const email = ref('')
-const password = ref('')
-const router = useRouter()
-const { login } = useAuth()
+// const email = ref('')
+// const password = ref('')
+// const router = useRouter()
+// const { login } = useAuth()
 
-const handleLogin = async () => {
-  const success = await login(email.value, password.value)
-  if (success) {
-    router.push('/dashboard')
-  }
-}
+// const handleLogin = async () => {
+//   const success = await login(email.value, password.value)
+//   if (success) {
+//     router.push('/dashboard')
+//   }
+// }
 </script>
 
 <style scoped>
