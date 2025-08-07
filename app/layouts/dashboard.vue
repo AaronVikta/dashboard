@@ -10,7 +10,7 @@
 
 <script setup>
 import Sidebar from '~/components/layout/Sidebar.vue'
-import TopBar from '~/components/layout/TopBar.vue'
+import TopBar from '~/components/layout/Topbar.vue'
 
 import { ref } from 'vue'
 const sidebarOpen = ref(true)

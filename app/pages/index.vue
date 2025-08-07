@@ -52,7 +52,7 @@ function login() {
 
 .login-form button {
   padding: 0.5rem;
-  background-color: var(--primary-color) !important;
+  background-color: #1e40af;
   color: white;
   border-radius: 4px;
 }

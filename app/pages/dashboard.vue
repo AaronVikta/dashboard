@@ -1,6 +1,9 @@
 <template>
   <div class="dashboard">
-    <h2 class="heading">Dashboard Overview</h2>
+    <div class="top">
+      <h2 class="heading">Dashboard Overview</h2>
+      <NuxtLink to="/" class="back-button">Back to Home</NuxtLink>
+    </div>
 
     <div class="cards">
       <div class="card" v-for="item in stats" :key="item.label">
@@ -15,18 +18,37 @@
   </div>
 </template>
 
-<<script setup>
+<script setup>
 import VisitorsChart from '~/components/charts/VisitorsChart.vue'
 import { useDashboardStore } from '../../stores/dashboard'
 import { storeToRefs } from 'pinia'
 
 const dashboardStore = useDashboardStore()
-const { stats } = storeToRefs(dashboardStore)
+const { stats, visitorsData } = storeToRefs(dashboardStore)
 
 await dashboardStore.fetchDashboardData()
 </script>
 
 <style scoped>
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.back-button {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
 .dashboard {
   display: flex;
   flex-direction: column;
